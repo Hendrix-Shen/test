@@ -3,6 +3,9 @@ description: Create a report to help us improve
 title: "[Bug] "
 labels: ["bug"]
 body:
+  - type: markdown
+    attributes:
+      value: Please search for existing issues before reporting where possible to avoid duplicate reporting.
   - type: input
     id: version_version
     attributes:
@@ -48,10 +51,9 @@ body:
       description: |
         Please provide your log here if you can.
   - type: checkboxes
-    id: know
+    id: latest_build_tested
     attributes:
       label: Latest CI build tested
-      description: The issue you are reporting may have been resolved in the latest CI build, so check that the issue still exists in the latest CI build before reporting it.
       options:
         - label: I confirm that this problem still exists with the latest CI build.
           required: true
