@@ -51,6 +51,7 @@ body:
     id: know
     attributes:
       label: Latest CI build tested
+      description: The issue you are reporting may have been resolved in the latest CI build, so check that the issue still exists in the latest CI build before reporting it.
       options:
         - label: I confirm that this problem still exists with the latest CI build.
           required: true
