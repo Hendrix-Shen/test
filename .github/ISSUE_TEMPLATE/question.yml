@@ -11,8 +11,8 @@ body:
     attributes:
       label: Question Type
       options:
-        - "Usage"
-        - "Code"
+        - "Codes"
+        - "Usages"
         - "Others"
     validations:
       required: true
