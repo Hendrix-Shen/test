@@ -1,5 +1,5 @@
 name: Bug Report
-description: Create a report to help us improve
+description: Create a report to help us improve.
 title: "[Bug] "
 labels: ["bug"]
 body:
@@ -15,11 +15,19 @@ body:
     validations:
       required: true
   - type: input
-    id: masa_gadget_version
+    id: pca_version
     attributes:
-      label: MasaGadget Version
+      label: Plusls Carpet Addition Version
       description: |
-        The version of MasaGadget you are running?
+        The version of Plusls Carpet Addition you are running?
+    validations:
+      required: true
+  - type: input
+    id: carpet_version
+    attributes:
+      label: Carpet Version
+      description: |
+        The version of Carpet you are running?
     validations:
       required: true
   - type: textarea
