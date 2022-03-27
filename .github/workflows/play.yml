@@ -26,7 +26,7 @@ jobs:
       - name: Generate build number
         id: buildnumber
         run: |
-          echo ${ github.ref_name }
+          echo ${{ github.ref_name }}
           buildnumber=$(echo ${{ github.ref_name }} | cut -d . -f3)
           echo "::set-output name=buildnumber::$buildnumber"
       - name: Print build number
