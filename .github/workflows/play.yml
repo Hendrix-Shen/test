@@ -27,7 +27,7 @@ jobs:
         id: buildnumber
         run: |
           echo ${ github.ref_name }
-          buildnumber=$(echo ${ github.ref_name } | cut -d . -f3)
+          buildnumber=$(echo ${{ github.ref_name }} | cut -d . -f3)
           echo "::set-output name=buildnumber::$buildnumber"
       - name: Print build number
         run: echo ${{ steps.buildnumber.outputs.buildnumber }}
