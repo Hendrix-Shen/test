@@ -8,7 +8,7 @@ on:
 
 jobs:
   publish:
-    if: ${{ github.event_name == 'release' }}
+    #if: ${{ github.event_name == 'release' }}
     strategy:
       matrix:
         java: [17]
