@@ -23,11 +23,5 @@ jobs:
         with:
           ref: ${{ matrix.branch }}
 
-      - name: Generate build number
-        id: buildnumber
-        run: |
-          echo ${{ github.ref_name }}
-          buildnumber=$(echo ${{ github.ref_name }} | cut -d . -f3)
-          echo "::set-output name=buildnumber::$buildnumber"
       - name: Print build number
-        run: echo ${{ steps.buildnumber.outputs.buildnumber }}
+        run: echo ${{ github.event.ref }}
