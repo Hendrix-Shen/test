@@ -1,0 +1,10 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read Documents
+    url: https://github.com/Hendrix-Shen/My-Playground/blob/main/README.md
+    about: |
+      Please make sure you have read the documents carefully before asking question. | 在提问前请确认已经认真阅读文档。
+  - name: Get CI Builds
+    url: https://github.com/Hendrix-Shen/My-Playground/actions
+    about: |
+      Please make sure you have tested the latest CI build before asking questions. | 在提问前请确认已经测试最新CI构建。

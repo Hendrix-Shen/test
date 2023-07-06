@@ -1,5 +1,5 @@
 name: Feature Request
-description: Suggest an idea for this project.
+description: Suggest an idea for this project. | 为项目提出新功能等建议。
 title: "[Feature Request] "
 labels: ["enhancement"]
 body:

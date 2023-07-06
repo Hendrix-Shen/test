@@ -1,5 +1,5 @@
 name: Question
-description: Anything you don't understand.
+description: Anything you don't understand. | 对项目进行提问。
 title: "[Question] "
 labels: ["question"]
 body:
