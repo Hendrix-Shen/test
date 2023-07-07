@@ -16,6 +16,8 @@ jobs:
       - name: Publish
         uses: Kir-Antipov/mc-publish@v3.2
         with:
+          files: |
+            README.md
           github-changelog: |
             **This version is automatically released by CI Build**
             
