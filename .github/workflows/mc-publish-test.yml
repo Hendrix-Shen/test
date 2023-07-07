@@ -25,6 +25,7 @@ jobs:
             
             - ${{ github.event.head_commit.message }}
           github-generate-changelog: true
+          github-draft: false
           github-prerelease: true
           github-commitish: ${{ github.event.ref }}
           github-tag: dev-${{ github.run_number }}
