@@ -14,10 +14,8 @@ jobs:
           fetch-depth: 0
 
       - name: Publish
-        uses: Kir-Antipov/mc-publish@v3.3
+        uses: Kir-Antipov/mc-publish@v3.2
         with:
-          files: |
-            README.md
           github-changelog: |
             **This version is automatically released by CI Build**
             
@@ -25,8 +23,7 @@ jobs:
             
             - ${{ github.event.head_commit.message }}
           github-generate-changelog: true
-          github-draft: false
+          github-draft: fals
           github-prerelease: true
-          github-commitish: ${{ github.event.ref }}
-          github-tag: dev-${{ github.run_number }}
+          github-tag: dev.${{ github.run_number }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
