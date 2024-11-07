@@ -1,4 +1,4 @@
-name: MC-Publish Test
+name: MC-Publish
 on:
   push:
 
