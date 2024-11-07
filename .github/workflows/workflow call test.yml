@@ -1,0 +1,13 @@
+name: workflow call test
+on:
+  workflow_call:
+
+jobs:
+  converttopdf:
+    name: Build PDF
+    runs-on: ubuntu-latest
+    steps:
+      - name: Determining build info
+        id: build_info
+        run: |
+          echo ${{ github.event }}
