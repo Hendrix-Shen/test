@@ -6,4 +6,4 @@ jobs:
   build:
     permissions:
       contents: write
-    uses: ./.github/workflows/build.yml
+    uses: ./.github/workflows/workflow call test.yml
