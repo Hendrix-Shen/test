@@ -10,4 +10,4 @@ jobs:
       - name: Determining build info
         id: build_info
         run: |
-          echo ${{ github.event }}
+          echo ${{ toJson(github.event) }}
