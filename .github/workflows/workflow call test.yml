@@ -10,3 +10,4 @@ jobs:
       - name: Print github context
         run: |
           echo ${{ toJson(github) }}
+          exit 0
