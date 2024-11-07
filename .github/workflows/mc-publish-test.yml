@@ -1,6 +1,7 @@
 name: MC-Publish
 on:
   push:
+  release:
 
 jobs:
   build:
