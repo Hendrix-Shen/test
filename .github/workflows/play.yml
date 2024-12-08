@@ -1,0 +1,38 @@
+name: CI
+on:
+  push:
+  release:
+    types:
+      - published
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout the sources
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install jq
+        run: |
+          sudo apt-get update 
+          sudo apt-get install -y jq
+      - name: Test env
+        id: test_env
+        run: |
+          python .github/workflows/scripts/test.py
+      - name: Test 2
+        id: test2
+        env:
+          HEAD_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          echo "test1<<EOF
+          $(printf "%q\n" $HEAD_COMMIT_MESSAGE)
+          EOF" >> "$GITHUB_OUTPUT"
+      - name: Print env
+        run: |
+          echo '${{ steps.test_env.outputs.test1 }}'
+          echo '${{ steps.test_env.outputs.test2 }}'
+          echo '${{ steps.test2.outputs.test1 }}'
